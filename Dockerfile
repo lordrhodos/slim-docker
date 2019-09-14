@@ -17,7 +17,7 @@ RUN a2enmod rewrite && \
 
 RUN usermod -u 1000 www-data
 
-COPY ./resources/docker/apache.conf /etc/apache2/sites-enabled/000-default.conf
+COPY ./apache.conf /etc/apache2/sites-enabled/000-default.conf
 ADD . /var/www/app
 
 WORKDIR /var/www/app
